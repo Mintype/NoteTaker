@@ -1,17 +1,32 @@
-import { Button, VerticalBox, GridBox } from "std-widgets.slint";
+import { Button, VerticalBox, GridBox, LineEdit, TextEdit, HorizontalBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
+    padding: 16px;
     GridBox {
         Row {
-
+            HorizontalBox {
+                Button {
+                    text: "Open";
+                }
+                Button {
+                    text: "Save";
+                }
+                Button {
+                    text: "New";
+                }
+            }
         }
 
         Row {
-
+            LineEdit {
+                
+            }
         }
 
         Row {
-            
+            TextEdit {
+                height: 50px;
+            }
         }
     }
 }
