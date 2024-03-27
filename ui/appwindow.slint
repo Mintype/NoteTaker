@@ -1,8 +1,14 @@
 import { Button, VerticalBox, GridBox, LineEdit, TextEdit, HorizontalBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
-    padding: 16px;
+
+    callback open-note();
+    callback save-note();
+    callback new-note();
+
     GridBox {
+        padding: 16px;
+        spacing: 10px;
         Row {
             HorizontalBox {
                 Button {
@@ -18,13 +24,14 @@ export component AppWindow inherits Window {
         }
 
         Row {
-            LineEdit {
-                placeholder-text: "Title goes here...";
+            title := LineEdit {
+                placeholder-text: "Title goes here";
+                horizontal-alignment: center;
             }
         }
 
         Row {
-            TextEdit {
+            currentNote := TextEdit {
                 height: 50px;
             }
         }
