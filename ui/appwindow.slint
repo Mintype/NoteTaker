@@ -13,12 +13,15 @@ export component AppWindow inherits Window {
             HorizontalBox {
                 Button {
                     text: "Open";
+                    clicked => {open-note()}
                 }
                 Button {
                     text: "Save";
+                    clicked => {save-note()}
                 }
                 Button {
                     text: "New";
+                    clicked => {new-note()}
                 }
             }
         }
