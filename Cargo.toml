@@ -9,6 +9,7 @@ build = "build.rs"
 
 [dependencies]
 slint = "1.4"
+nfd = "0.0.4"
 
 [build-dependencies]
 slint-build = "1.4"

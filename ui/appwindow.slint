@@ -2,6 +2,9 @@ import { Button, VerticalBox, GridBox, LineEdit, TextEdit, HorizontalBox } from 
 
 export component AppWindow inherits Window {
 
+    in property <string> file-title;
+    in property <string> file-contents;
+
     callback open-note();
     callback save-note();
     callback new-note();
@@ -31,12 +34,14 @@ export component AppWindow inherits Window {
                 vertical-stretch: 0;
                 placeholder-text: "Title goes here";
                 horizontal-alignment: center;
+                text: root.file-title;
             }
         }
 
         Row {
             currentNote := TextEdit {
                 min-height: 50px;
+                text: root.file-contents;
             }
         }
     }
