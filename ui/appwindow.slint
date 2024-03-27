@@ -28,6 +28,7 @@ export component AppWindow inherits Window {
 
         Row {
             title := LineEdit {
+                vertical-stretch: 0;
                 placeholder-text: "Title goes here";
                 horizontal-alignment: center;
             }
@@ -35,7 +36,7 @@ export component AppWindow inherits Window {
 
         Row {
             currentNote := TextEdit {
-                height: 50px;
+                min-height: 50px;
             }
         }
     }
