@@ -2,6 +2,7 @@ import { Button, VerticalBox, GridBox, LineEdit, TextEdit, HorizontalBox } from 
 
 export component AppWindow inherits Window {
     title: "NoteTaker";
+    icon: @image-url("icon.png");
 
     in property <string> file-title;
     in property <string> file-contents;
