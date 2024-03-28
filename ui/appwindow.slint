@@ -6,7 +6,7 @@ export component AppWindow inherits Window {
     in property <string> file-contents;
 
     callback open-note();
-    callback save-note();
+    callback save-note(string, string);
     callback new-note();
 
     GridBox {
@@ -20,7 +20,7 @@ export component AppWindow inherits Window {
                 }
                 Button {
                     text: "Save";
-                    clicked => {save-note()}
+                    clicked => {save-note(title.text, currentNote.text)}
                 }
                 Button {
                     text: "New";

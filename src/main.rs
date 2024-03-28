@@ -36,9 +36,29 @@ fn main() -> Result<(), slint::PlatformError> {
     // Function for when user clicks 'save' button.
     ui.on_save_note({
         let ui_handle = ui_handle.clone();
-        move || {
+        move |file_title, file_contents| {
             let ui = ui_handle.unwrap();
             println!("User has clicked: save");
+
+            println!("File title: {}", file_title.trim());
+            println!("File contents:\n{}", file_contents.trim());
+
+            // If the file has no title, don't save.
+            if file_title.is_empty() {
+                println!("File title is empty. Cannot save.");
+                return;
+            }
+            // Open a file dialog to select the save location.
+            if let Ok(Response::Okay(save_path)) = nfd::open_save_dialog(Some(&file_title), None) {
+                // Write the file contents to the selected file.
+                if let Err(err) = std::fs::write(save_path, file_contents) {
+                    println!("Error saving file: {}", err);
+                } else {
+                    println!("File saved successfully.");
+                }
+            } else {
+                println!("Save dialog canceled.");
+            }
         }
     });
 
