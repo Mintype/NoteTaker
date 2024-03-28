@@ -10,7 +10,7 @@ fn main() -> Result<(), slint::PlatformError> {
 
     let ui_handle = ui.as_weak();
 
-    // function for when user clicks 'open' button.
+    // Function for when user clicks 'open' button.
     ui.on_open_note({ 
         let ui_handle = ui_handle.clone();
         move || {
@@ -33,7 +33,7 @@ fn main() -> Result<(), slint::PlatformError> {
         }
     });
 
-    // function for when user clicks 'save' button.
+    // Function for when user clicks 'save' button.
     ui.on_save_note({
         let ui_handle = ui_handle.clone();
         move || {
@@ -42,7 +42,7 @@ fn main() -> Result<(), slint::PlatformError> {
         }
     });
 
-    // function for when user clicks 'new' button.
+    // Function for when user clicks 'new' button.
     ui.on_new_note({ 
         let ui_handle = ui_handle.clone();
         move || {
