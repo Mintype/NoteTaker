@@ -48,6 +48,9 @@ fn main() -> Result<(), slint::PlatformError> {
         move || {
             let ui = ui_handle.unwrap();
             println!("User has clicked: new");
+            // Clear file title and file contents.
+            ui.set_file_title("".into());
+            ui.set_file_contents("".into());
         }
     });
 
