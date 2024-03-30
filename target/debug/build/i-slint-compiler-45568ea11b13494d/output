@@ -1,0 +1,2 @@
+cargo:rerun-if-changed=C:\Users\900ra\.cargo\registry\src\index.crates.io-6f17d22bba15001f\i-slint-compiler-1.5.1\widgets
+cargo:rustc-env=SLINT_WIDGETS_LIBRARY=C:\Users\900ra\Documents\programming\rust\notetaker\target\debug\build\i-slint-compiler-45568ea11b13494d\out\included_library.rs
