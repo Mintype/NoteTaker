@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 slint::include_modules!();
 
 use std::fs::File;

@@ -5,11 +5,12 @@ authors = ["SmallPlayz <900raiyan@gmail.com>"]
 edition = "2021"
 build = "build.rs"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 slint = "1.4"
 nfd = "0.0.4"
 
 [build-dependencies]
 slint-build = "1.4"
+
+[package.metadata.winres]
+features = ["windows-subsystem"]
