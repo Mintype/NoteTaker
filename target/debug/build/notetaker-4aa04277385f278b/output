@@ -1,8 +1,0 @@
-cargo:rerun-if-changed=C:\Users\900ra\Documents\programming\rust\notetaker\ui/appwindow.slint
-cargo:rerun-if-changed=C:\Users\900ra\Documents\programming\rust\notetaker\ui\icon.png
-cargo:rerun-if-env-changed=SLINT_STYLE
-cargo:rerun-if-env-changed=SLINT_FONT_SIZES
-cargo:rerun-if-env-changed=SLINT_SCALE_FACTOR
-cargo:rerun-if-env-changed=SLINT_ASSET_SECTION
-cargo:rerun-if-env-changed=SLINT_EMBED_RESOURCES
-cargo:rustc-env=SLINT_INCLUDE_GENERATED=C:\Users\900ra\Documents\programming\rust\notetaker\target\debug\build\notetaker-4aa04277385f278b\out\appwindow.rs
